@@ -33,7 +33,10 @@ const categorias = ["Piezas", "Tuberias", "Otros"];
 const css = `
   @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@700;800&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #0f1117; }
+ body { background: #0f1117; overflow-x: hidden; }
+html { overflow-x: hidden; }
+* { max-width: 100vw; }
+.tab-btn { padding: 10px 12px; font-size: 11px; }
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: #1a1d27; }
   ::-webkit-scrollbar-thumb { background: #FFD700; border-radius: 3px; }
