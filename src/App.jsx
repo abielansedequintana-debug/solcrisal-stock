@@ -44,6 +44,10 @@ html { overflow-x: hidden; }
   .tab-btn { background: none; border: none; cursor: pointer; font-family: DM Mono, monospace; font-size: 11px; padding: 8px 8px; color: #666; letter-spacing: 0em; transition: all 0.2s; border-bottom: 2px solid transparent; white-space: nowrap; }
   .tab-btn.active { color: #FFD700; border-bottom: 2px solid #FFD700; }
   .tab-btn:hover { color: #e8e8e0; }
+.btn-group { display: flex; gap: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; }
+  .btn-group::-webkit-scrollbar { display: none; }
+  table { min-width: 600px; }
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .tabs-container { display: flex; overflow-x: auto; gap: 0; -webkit-overflow-scrolling: touch; }
   .tabs-container::-webkit-scrollbar { display: none; }
   .card { background: #1a1d27; border: 1px solid #2a2d3a; border-radius: 12px; padding: 24px; }
