@@ -373,10 +373,10 @@ function StockApp() {
                 {categorias.map(c => <option key={c}>{c}</option>)}
               </select>
             </div>
-            <div className="card" style={{ padding: 0, overflow: "hidden" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch", borderRadius: 12, border: "1px solid #2a2d3a" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 500 }}>
                 <thead style={{ background: "#13151e" }}>
-                  <tr>{["Codigo","Producto","Categoria","Ubicacion","Stock","Min.","Precio","Estado",""].map(h => <th key={h}>{h}</th>)}</tr>
+                  <tr>{["#","Nombre","Movimientos",""].map(h => <th key={h}>{h}</th>)}</tr>
                 </thead>
                 <tbody>
                   {filteredProducts.map(p => {
