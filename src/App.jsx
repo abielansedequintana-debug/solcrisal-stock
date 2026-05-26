@@ -41,9 +41,11 @@ html { overflow-x: hidden; }
   ::-webkit-scrollbar-track { background: #1a1d27; }
   ::-webkit-scrollbar-thumb { background: #FFD700; border-radius: 3px; }
   input, select { outline: none; }
-  .tab-btn { background: none; border: none; cursor: pointer; font-family: DM Mono, monospace; font-size: 13px; padding: 10px 20px; color: #666; letter-spacing: 0.05em; transition: all 0.2s; border-bottom: 2px solid transparent; }
+  .tab-btn { background: none; border: none; cursor: pointer; font-family: DM Mono, monospace; font-size: 11px; padding: 8px 8px; color: #666; letter-spacing: 0em; transition: all 0.2s; border-bottom: 2px solid transparent; white-space: nowrap; }
   .tab-btn.active { color: #FFD700; border-bottom: 2px solid #FFD700; }
   .tab-btn:hover { color: #e8e8e0; }
+  .tabs-container { display: flex; overflow-x: auto; gap: 0; -webkit-overflow-scrolling: touch; }
+  .tabs-container::-webkit-scrollbar { display: none; }
   .card { background: #1a1d27; border: 1px solid #2a2d3a; border-radius: 12px; padding: 24px; }
   .btn { border: none; border-radius: 8px; cursor: pointer; font-family: DM Mono, monospace; font-size: 13px; font-weight: 500; padding: 10px 20px; transition: all 0.2s; }
   .btn-primary { background: #FFD700; color: #1a1a5e; font-weight: 700; }
@@ -283,7 +285,7 @@ function StockApp() {
             </div>
           )}
         </div>
-        <div style={{ display: "flex", gap: 4 }}>
+        <div className="tabs-container">
           {[["dashboard","▣ Dashboard"],["productos","▤ Productos"],["movimientos","⇅ Movimientos"],["alertas","⚠ Alertas"],["empleados","👤 Empleados"]].map(([key, label]) => (
             <button key={key} className={"tab-btn" + (tab === key ? " active" : "")} onClick={() => setTab(key)}>{label}</button>
           ))}
